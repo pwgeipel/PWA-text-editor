@@ -25,11 +25,14 @@ module.exports = () => {
       template: './index.html'
     }),
               new InjectManifest({
-      swDest: 'src-sw.js',
       swSrc: './src-sw.js',
+      swDest: 'src-sw.js',
               }),
               new WebpackPwaManifest({
-                name: 'JATE',
+                fingerprints: false,
+                inject: true,
+                name: 'Just Another Text Editor',
+                short_name: 'JATE',
                 description: 'My text editor PWA!',
                 // background_color: '#ffffff',
                 start_url: './',
@@ -53,6 +56,13 @@ module.exports = () => {
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
           type: 'asset/resource',
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+            },
+          },
         },
       ],
     },
