@@ -42,4 +42,4 @@ This application uses a license from MIT.
 
 ## Questions
 
-If you have any questions, please contact me at pwgeipel@att.net.  You may also see more of my projects at [pwgeipel](https://github.com/pwgeipel/).  -->
+If you have any questions, please contact me at pwgeipel@att.net.  You may also see more of my projects at [pwgeipel](https://github.com/pwgeipel/).
